@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+
+/* -----------------------
+ 排版 
+-------------------------- */
+.mobCou_row {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.mobCou_col_100 { width: 100%;}
+.mobCou_col_75 { width: calc(75% - 3px);}
+.mobCou_col_50 { width: calc(50% - 5px);}
+.mobCou_col_25 { width: calc( ( 100% - 30px ) / 4);}
+
+.mobCou_col_100,
+.mobCou_col_75,
+.mobCou_col_50,
+.mobCou_col_25 { position: relative; }
+
+.overflow_hidden { overflow-y: hidden;}
+
+
+/* -----------------------
+ 項目符號 
+-------------------------- */
+.ulStyle_decimal     { list-style-type: decimal;              /*阿拉伯數字*/ }
+.ulStyle_decimalZero { list-style-type: decimal-leading-zero; /*阿拉伯數字(十進制前置零) IE6 顯示為實心圓形符號*/ }
+.ulStyle_disc        { list-style-type: disc;                 /* 實心 */ }
+.ulStyle_circle      { list-style-type: circle;               /* 空心 */ }
+.ulStyle_upperAlpha  { list-style-type: upper-alpha;          /*大寫英文字母*/ }
+.ulStyle_square      { list-style-type: square;               /*實心方形符號*/ }
+
+
+/* -----------------------
+ 文字類 
+-------------------------- */
+.title_h2 {
+	margin: 0 0 10px;
+	padding: 0;
+	
+	color: #202020;
+	font-size: 36px;
+	font-weight: bold;
+
+}
+.text_justified {
+	text-align: justify;
+	text-justify: inter-ideograph; /* IE only */
+}
+
+
+/* -----------------------
+ 底色 
+-------------------------- */
+.bg_color_gray { background-color: #E0E0E0; } /* 停用 */
+.bg_color_ABABAB { background-color: #ABABAB;} /* 用於主次按鈕的次要色，例如：確定與取消的「後者」、開啟與關閉「後者」 */
+
+.bg_color_D3060F { background-color: #D3060F;} /* 主色 */
+.bg_color_EA574D { background-color: #EA574D;} /* 次主色*/
+
+
+/* 灰階 ---------- */
+.bg_color_333 { background-color: #333;}
+.bg_color_FFF { background-color: white;}
+
+/* 暖色 ---------- */
+.bg_color_EA574D { background-color: #EA574D;}
+.bg_color_44B78F { background-color: #44B78F;}
+
+/* 冷色4 ---------- */
+.bg_color_5CC3D2 { background-color: #5CC3D2;}
+

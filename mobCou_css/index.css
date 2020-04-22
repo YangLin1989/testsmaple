@@ -1,0 +1,511 @@
+﻿@charset "utf-8";
+@import "pagelayout_info.css"; /* layout Information*/
+
+/* ================================= *\
+ html
+==================================== */
+* { box-sizing: border-box;}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #FAFAFA url("img/mobCou_body_background.png") no-repeat right 72px; /* 72px 是目前 <header> 的高度 */
+	background-size: 100%;
+	overflow-x: hidden;
+	
+	font-family: "PingFang TC", "Noto Sans TC", "Roboto", "Microsoft JhengHei", "微軟正黑體", "STHeitiTC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	font-size: 16px;
+}
+
+a, a:link { text-decoration: none;}
+
+input, select { vertical-align: middle;}
+select {
+	font-family: "PingFang TC", "Noto Sans TC", "Roboto", "Microsoft JhengHei", "微軟正黑體", "STHeitiTC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+
+.h914 {
+	position: absolute;
+	z-index: 9999;
+	top: 912px;
+	/* display: -webkit-flex;
+	display: flex;*/ 
+	display: none;
+	width: 100%;
+	height: 2px;
+	background-color: red;
+	
+}
+
+
+/* ================================= *\
+ mobCou_wrapper，<body> 下的第一層
+==================================== */
+
+/* 為了避免與現有樣式衝突，部分命名上會添加「 mobCou_ 」作為字首 ------------------------------- */
+
+#mobCou_wrapper {
+	position: relative;		
+	margin: auto;	
+}
+
+
+
+/* ============================
+ <header>
+=============================== */
+header {
+	height: 72px;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 0 10px;
+	background-color: white;
+}
+
+
+/* -----------------------
+ 遠傳FET Logo 
+-------------------------- */
+.mobCou_FETlogo { width: 110px;}
+.mobCou_FETlogo_img,
+.mobCou_FETlogo_img img { width: 100%;}
+
+.mobCou_FETlogo_title {
+	display: none;	 /* <div class="FETstore_news">做出來之後再顯示 */
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+}
+
+
+/* -----------------------
+ 最上方狀態列 
+-------------------------- */
+.mobCou_topInfo {
+	display: -webkit-flex;
+	display: flex;	
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: calc(100% - 110px);	
+}
+
+/* 機台資訊 ---------- */
+.deviceInfo {
+	display: -webkit-flex;
+	display: flex;	
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	padding-top: 10px;
+}
+.deviceUser { 
+	color: #202020;
+	font-size: 24px;
+	font-weight: 700;
+	width: 150px;
+}
+.icon_exclamationMark { /* 圖示：驚嘆號 */
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	border-radius: 99px;
+	background-color: #202020;
+	
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+}
+.deviceUserName {margin-left: 10px;}
+
+.store_ID,
+.device_ID {
+	color: #202020;
+	font-size: 20px;	
+}
+.store_ID { margin-right: 20px;}
+
+
+/* 新聞公告 ---------- */
+.FETstore_news {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #EF3123;
+	font-size: 20px;
+	font-weight: 700;
+}
+	.FETstore_news a {
+		color: #EF3123;
+		text-decoration: none;	
+	}
+
+.FETstore_news_text {
+	display: inline-block;
+	width: calc(100% - 100px);
+	max-width: 900px;
+	margin-right: 10px;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	
+}
+.FETstore_news_more {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+}
+.FETstore_news_more span {
+	position: absolute;
+	left: 60px;
+	top: 11px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-bottom: 2px solid #EF3123;
+	border-right: 2px solid #EF3123;	
+	transform: rotate(-45deg);
+	
+	content: '';
+}
+
+
+/* -----------------------
+ 績效達成進度 
+-------------------------- */
+.complianceRate { width: 100%;}
+
+
+
+/* ============================
+ .mobCou_mainContent
+=============================== */
+.mobCou_mainContent { 
+	/*position: relative;*/
+}
+
+
+/* -----------------------
+ 上方選單 
+-------------------------- */
+.toptool {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;	
+	margin: 40px 0;
+	padding-left: 30px;
+}
+
+
+/* 左側按鈕群 ---------- */
+.toptool_leftBar { }
+.toptool_btn {
+	position: relative;
+	top: 0;
+	height: 66px;
+	margin-right: 10px;
+	padding: 0 0 4px;	
+	border-width: 3px 4px;
+	border-style: solid;
+	border-color: #333;
+	border-radius: 999px;
+	background: #E0E0E0;
+	box-shadow: 0 6px 12px 0 rgba(75, 88, 105, 0.12);
+	
+	color: #333;
+	font-size: 24px;
+	
+	transition: all .5s;
+}
+	.toptool_btn:hover { box-shadow: 0 12px 24px 0 rgba(75, 88, 105, 0.3);}
+	.toptool_btn div {
+		display: -webkit-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 56px;
+		padding: 0 20px;
+		border-radius: 26px;
+		background-color: white;
+	}
+
+.toptool_btn_icon {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-right: 6px;	
+}
+	.toptool_btn_icon img { width: 100%;}
+
+
+/* 右側按鈕群 ---------- */
+.toptool_rightBar {}
+.toptool_login_group {	
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 66px;
+	padding: 0 0 4px;
+	border-top: 3px solid #333; 
+	border-bottom: 3px solid #333;
+	border-left: 4px solid #333;
+	border-top-left-radius: 999px;
+	border-bottom-left-radius: 999px;
+	background: #E0E0E0;
+	box-shadow: 0 6px 12px 0 rgba(75, 88, 105, 0.12);
+	transition: all .5s;
+}
+	.toptool_login_bar:hover { box-shadow: 0 12px 24px 0 rgba(75, 88, 105, 0.3);}
+
+.toptool_btn_login {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 56px;
+	margin-right: 0;
+	border: none;
+	border-radius: 999px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: white;
+}
+.toptool_btn_login_icon {
+	width: 48px;
+	height: 48px;
+	display: block;	
+}	
+	.toptool_btn_login_icon img { width: 100%;}
+
+.toptool_btn_login_text { padding: 0 15px;}
+.toptool_btn_logout {
+	height: 56px;
+	border: none;
+	background-color: white;
+}
+.toptool_btn_logout div {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 56px;
+	height: 44px;
+	padding-left: 8px;
+	border-left: 2px solid #333;	
+}
+
+
+/* -----------------------
+ 主打推薦 
+-------------------------- */
+.mobCou_recommend_AD { padding-bottom: 60px;}
+.mobCou_recommend_AD .title_h2 { padding-left: 30px;} 	/* 改寫「.title_h2」 */
+.mobCou_recommend_AD_list { 
+	position: relative;
+	padding-bottom: 20px;
+}
+
+
+/* slick.js 的改寫 ---------- */
+.mobCou_recommend_AD_list.slick-slider { transition: all .5s;}
+.mobCou_recommend_AD_list .slick-list { overflow: inherit;} /* 原本的「hiddn;」，會讓廣告組的下方陰影顯示不完整 */
+
+/* slick.js 的左、右翻按鈕 */
+.mobCou_recommend_AD_list button.slick-prev,
+.mobCou_recommend_AD_list button.slick-next{
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	/*display: none !important;*/
+	width: 60px;
+	height: 60px;
+	margin-top: -20px;
+	border: none;
+	border-radius: 999px;
+	/*background-color: white;*/
+	box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, .16);
+	
+	color: #202020;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -5000px;	
+}
+.mobCou_recommend_AD_list button.slick-prev { 
+	left: 20px; 
+	background: white url("img/icon_arrow_L.svg") no-repeat 14px center;
+}
+.mobCou_recommend_AD_list button.slick-next { 
+	right: 20px;
+	background: white url("img/icon_arrow_R.svg") no-repeat 18px center;	
+}
+.mobCou_recommend_AD_list button.slick-prev,
+.mobCou_recommend_AD_list button.slick-next { background-size: 26px 26px;}
+
+
+/* 每組廣告 ---------- */
+.mobCou_recommend_AD_group {
+	display: inline-block;
+	width: 340px;
+	margin-right: 10px;	
+	background-color: white;
+	border-radius: 8px;	
+	box-shadow: 0 6px 12px 0 rgba(75, 88, 105, 0.12);
+	transition: box-shadow .5s;
+}
+	.mobCou_recommend_AD_group:hover  { box-shadow: 0 18px 36px 0 rgba(75, 88, 105, 0.18);}
+
+.mobCou_recommend_AD_img {
+	width: 100%;
+}
+	.mobCou_recommend_AD_img img {
+		width: 100%;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	.mobCou_recommend_AD_group_onlyImg img { border-radius: 8px;}
+
+.mobCou_recommend_AD_info { padding: 12px 16px 20px;}
+.mobCou_recommend_AD_text {	
+	width: 100%;	
+	
+	color: #202020;
+	font-size: 24px;
+	
+	/* 多行文字的省略 */
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;	
+}
+
+
+/* -----------------------
+ 下方的主選單 
+-------------------------- */
+.mobCou_homeMenu {
+	position: fixed;
+	z-index: 50;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	background: url("file:///D|/1_project/6_Moblie-Counter/web/mobCou_css/img/mobCou_homeMenu.png") no-repeat left bottom;
+	background-size: auto 100%;
+}
+.mobCou_homeMenu .title_h2 { padding-left: 10px;} 	/* 改寫「.title_h2」 */
+.mobCou_homeMenu_content {}
+
+/* slick.js 的改寫 ---------- */
+/* slick.js 的左、右翻按鈕 */
+.mobCou_homeMenu button.slick-prev,
+.mobCou_homeMenu button.slick-next { 
+	position: absolute;
+	top: -300px;
+	left: -300px;
+	z-index: -100;
+}
+
+/* slick.js 的「●○○○○○」*/
+.mobCou_homeMenu ul.slick-dots {
+	position: absolute;
+	top: -90px;
+	right: 0;
+}
+.mobCou_homeMenu ul.slick-dots li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.mobCou_homeMenu ul.slick-dots li:nth-last-child(1) { margin-right: 0;}
+.mobCou_homeMenu ul.slick-dots li button {
+	width: 60px;
+	height: 60px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 999px;
+	background-color: white;
+	transition: background .5s;
+	color: #202020;	
+}
+	.mobCou_homeMenu ul.slick-dots li button:hover { background-color: #D6D6D6;}
+
+.mobCou_homeMenu ul.slick-dots li.slick-active button { 
+	background-color: #6A798E;
+	color: white;
+}
+
+/* 列、欄 ---------- */
+.mobCou_homeMenu_list {}
+.mobCou_homeMenu_row {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+	.mobCou_homeMenu_list .mobCou_homeMenu_row:nth-last-child(1) { margin-bottom: 0;}
+
+.mobCou_homeMenu_col_100 { width: 100%;}
+.mobCou_homeMenu_col_75  { width: calc( 75% - 5px );}
+.mobCou_homeMenu_col_50  { width: calc( 50% - 10px);}
+.mobCou_homeMenu_col_25  { width: calc( ( 100% - 60px ) / 4);}
+
+
+/* 按鈕 */
+.mobCou_mainContent .mobCou_homeMenu_btn { color: white;} /* 改寫 .mobCou_mainContent button {} */
+.mobCou_homeMenu_btn {
+	position: relative;	
+	width: 100%;
+	height: 60px;	
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: white;
+}
+	.mobCou_homeMenu_btn span {
+		opacity: 1;
+		display: block;		
+		width: 100%;
+		height: 60px;		
+		
+		line-height: 60px;
+		transition: opacity .5s;
+	}
+
+.mobCou_homeMenu_btn:hover span { opacity: .8;}
+
+
+/* -----------------------
+ 客資查詢 
+-------------------------- */
+
+/* 以「燈箱」方式開啟，其樣式在「mobCou_popup.css」*/
+
+/* 共用表單的樣式寫在「mobCou_from.css」 */
+
+.agentInfo,
+.underageInfo { margin: 40px 0 0; }
+
+/* 「是否為代理 (辦) 人 ?」、「是否未成年 ?」內容顯示的開關 */
+
+input[type="checkbox"].agent_switch + span + .agentInfo { display: none;}
+input[type="checkbox"].agent_switch:checked + span + .agentInfo { display: block;}
+
+input[type="checkbox"].underage_switch + span + .underageInfo { display: none;}
+input[type="checkbox"].underage_switch:checked + span + .underageInfo { display: block;}
+
+.agentInfo .mobCou_row,
+.underageInfo .mobCou_row { margin-bottom: 20px;}

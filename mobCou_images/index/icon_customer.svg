@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Oval" cx="26" cy="26" r="26" fill="#d95046"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1264" data-name="Group 1264" transform="translate(6765 14974)">
+    <g id="Mask_Group_71" data-name="Mask Group 71" transform="translate(-6765 -14974)" clip-path="url(#clip-path)">
+      <circle id="Oval-2" data-name="Oval" cx="26" cy="26" r="26" fill="#d95046"/>
+      <g id="Group" transform="translate(-43.883 -55.672)">
+        <path id="Path-Copy-3" d="M0,0V31.823L70.082,81.871V50Z" fill="#cd443a"/>
+        <path id="Path-Copy-5" d="M0,98v31.823l70.082,50.048V148Z" transform="translate(0 -34.468)" fill="#cd443a"/>
+        <path id="Path-Copy-22" d="M108,28V59.823l70.082,50.048V78Z" transform="translate(-37.918 -9.661)" fill="#cd443a"/>
+        <path id="Path-Copy-23" d="M107,126v31.823l70.082,50.048V176Z" transform="translate(-36.918 -44.129)" fill="#cd443a"/>
+        <path id="Path-12-Copy-20" d="M24.844,35.805V0L0,17.9Z" transform="translate(94.926 81.871) rotate(180)" fill="#ea574d"/>
+        <path id="Path-12-Copy-19" d="M98.806,125v37.191L73,143.6Z" transform="translate(-28.725 -43.129)" fill="#c03d33"/>
+      </g>
+    </g>
+    <g id="Group_1058" data-name="Group 1058" transform="translate(43 159.625)">
+      <path id="Stroke-1" d="M24.64,20.625a5.073,5.073,0,1,1-5.071-5.25A5.163,5.163,0,0,1,24.64,20.625Z" transform="translate(-6800.686 -15137)" fill="none" stroke="#fff" stroke-width="2" fill-rule="evenodd"/>
+      <path id="Stroke-3" d="M5.686,43.125l5.389-13H27.3l5.389,13Z" transform="translate(-6800.686 -15137)" fill="none" stroke="#fff" stroke-width="2" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

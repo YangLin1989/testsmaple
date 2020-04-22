@@ -1,0 +1,99 @@
+﻿@charset "utf-8";
+
+/* ================================= *\
+ 燈箱
+==================================== */
+
+
+/* ============================
+ 背景
+=============================== */
+.popup_overlay {
+	position: absolute;
+	-webkit-overflow-scrolling: touch; /* 改善觸碰裝置使用不流暢 */
+	z-index: 900;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .7);
+}
+.popup_overlay_contentInCenter {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-content: center;	
+}
+
+
+/* -----------------------
+ 主要內容 
+-------------------------- */
+.popup_box {		
+	margin: auto;
+	background-color: white;
+}
+.popup_box_L {
+	width: calc(100% - 120px);
+	max-width: 1080px;
+}
+.popup_box_M {
+	width: calc(100% - 294px);
+	max-width: 600px;
+}
+
+
+/* 版頭 ---------- */
+.popup_header { 
+	position: relative;
+	padding: 30px 30px 12px;
+}
+.popup_header_title {
+	color: #202020;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;	
+}
+
+/* 按鈕：關閉燈箱 */
+.popup_close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 60px;
+	height: 60px;	
+	margin: 0 auto;
+	
+	cursor: pointer;
+}
+	.popup_close div:nth-child(1),
+	.popup_close div:nth-child(2) {
+		position: absolute;
+		width: 28px;
+		height: 6px;
+		top: 50%;
+		left: 50%;		
+		margin-top: -3px;
+		margin-left: -14px;
+		background-color: #ABABAB;
+		transition: background .5s;
+	}
+	.popup_close div:nth-child(1) { transform: rotate(45deg)}
+	.popup_close div:nth-child(2) { transform: rotate(-45deg)}
+
+.popup_close:hover div { background-color: #333;}
+
+
+/* 中間內容 ---------- */
+.popup_content { 
+	overflow-y: scroll;
+	max-height: 500px;
+	padding: 30px;	
+}
+
+
+/* 最下方工具列 ---------- */
+.popup_footer { padding: 24px 30px 30px;}
+.popup_footer button { width: 100%;}
